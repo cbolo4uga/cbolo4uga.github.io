@@ -1,0 +1,137 @@
+.main-container
+	padding-top: 99px
+.posts
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	&-cart
+		max-width: 574px
+		width: 100%
+		padding: 43px 20px 29px
+		background-color: #fff
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		margin-bottom: 50px
+		transition: .4s
+		&:hover
+			box-shadow: 4px 4px 18px rgba(0,0,0,.4), -1px 0 3px rgba(0,0,0,.1)
+		&:focus
+			outline: none
+			box-shadow: 4px 4px 18px rgba(0,0,0,.4), -1px 0 3px rgba(0,0,0,.1)
+		&__photo
+			margin-right: 50px
+		&__message
+				white-space: pre-line
+				margin-bottom: 16px
+				color: #000
+				font-size: $fzp
+				font-weight: $fwm
+				line-height: $lh
+		&__info
+			display: flex
+			margin-bottom: 38px
+			&-item
+				margin-right: 15px
+				font-size: 12px
+				color: #252525
+				@include last-child-margin
+			&-icon
+				margin-right: 7px
+				cursor: pointer
+				&:hover
+					opacity: .2
+				&:focus
+					opacity: .2
+			.disable
+				i
+					color: #9a9a9a
+					vertical-align: bottom
+				span
+					opacity: .5
+		&__category
+			color: #d0d0d0
+			font-size: $fzs
+			&-icon
+				margin-right: 10px
+				color: #d0d0d0
+				transform: rotate(135deg)
+				cursor: pointer
+				transition: .5s
+			&-link
+				line-height: $lh
+				color: #c9c9c9
+				text-decoration: underline
+				&:hover
+					color: #00D3CB
+					text-decoration: none
+				&:focus
+					color: #00D3CB
+					text-decoration: none
+	@media only screen and (max-width: 1245px)
+		&-cart
+			width: 30%
+			flex-direction: column
+			padding: 25px 20px 25px 40px
+			justify-content: flex-end
+			&__photo
+				margin: 0 0 20px 0
+			&__info
+				margin-bottom: 20px
+			&__category
+				font-size: $fzs
+	@media only screen and (max-width: 950px)
+		&-cart
+			width: 48%
+			&__info-icon
+				font-size: $fzl
+	@media only screen and (max-width: 651px)
+		&-cart
+			width: 100%
+			align-items: center
+	@media only screen and (max-width: 420px)
+		&-cart
+			align-items: flex-start
+			img
+				width: 30%
+	&-article
+		&__header
+			color: #000
+			font-size: $fzh
+			font-weight: $fwm
+			line-height: $lh
+			margin-bottom: 14px
+			white-space: pre-line
+		.posts-cart
+			max-width: 100%
+			padding: 61px 52px 25px 40px
+			align-items: center
+			&__photo
+				width: 50%
+				margin-bottom: 30px
+				margin-right: 40px
+				padding-left: 88px
+			&__content 
+				flex: 1
+			&__message
+				font-weight: $fw
+				margin-bottom: 30px
+			&__info
+				margin-bottom: 48px
+		@media only screen and (max-width: 1245px)
+			display: flex
+			justify-content: center
+			.posts-cart
+				align-items: flex-start
+				flex-direction: row
+				width: 100%
+				&__photo
+					padding-left: 0
+		@media only screen and (max-width: 950px)
+			.posts-cart
+				flex-direction: column
+		@media only screen and (max-width: 420px)
+			.posts-cart__photo
+				img
+					width: 50%
+

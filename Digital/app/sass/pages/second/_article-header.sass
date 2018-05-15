@@ -1,0 +1,143 @@
+.article-header
+  padding-top: 30px
+  padding-bottom: 79px
+  max-width: 1960px
+  width: 100%
+  display: flex
+  justify-content: center
+  // background-color: #f7f7f7
+  background: url(../img/article/jsimage/gradient.jpg) repeat bottom
+  background-size: cover
+  position: relative
+  animation: gradient 60s infinite 2s alternate
+  &:hover
+    animation-play-state: paused
+  &:before
+    content: ''
+    position: absolute
+    display: block
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: url(../img/article/jsimage/overlay.png) no-repeat bottom
+    background-size: cover
+    animation: sunbeam 30s infinite 2s alternate
+    width: 100%
+    height: 100%
+  &-menu
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 100px
+  &__title
+    width: 90%
+    text-align: center
+  &__title .position
+    position: relative
+    left: -95px
+  @media only screen and (max-width: 1200px)
+    &__title
+      width: 100%
+  @media only screen and (max-width: 1024px)
+    &__title
+      perspective: 200px
+      span
+        transition: .4s
+        &:nth-child(1)
+          transform: rotateZ(40deg)
+          &:hover
+            animation: rotate 25s infinite
+        &:nth-child(2)
+          transform:  rotateX(20deg)
+          position: relative
+          left: 0
+          z-index: 2
+          &:hover
+            transform: rotateZ(63deg) translate(-10px,-30px)
+        &:nth-child(3)
+          transform: rotateY(-20deg)
+          position: relative
+          z-index: 4
+          &:hover
+            transform: rotateY(-20deg) translate(20px,-20px)
+            box-shadow: -25px 45px 25px -15px rgba(0,0,0,.5),-20px 50px 25px  rgba(110,150,150,.3)
+            // box-shadow: -20px 50px 20px -10px rgba(50,50,20,.35), -22px 61px 25px  rgba(110,150,150,.3)
+    @media only screen and (max-width: 768px)
+      animation: none
+      &:before
+        opacity: .5
+        animation: none
+      &__title img
+        width: 80%
+.menu-nav
+  display: flex
+  &__box
+    margin-right: 19px
+    @include last-child-margin
+.nav,
+.contact
+  &__toggle
+    border: none
+    background-color: transparent
+    font-size: 20px
+@keyframes rotate
+      5%
+        box-shadow: inset 0 0 200px 500px rgb(132,0,125), 0 0 200px 500px rgb(132,0,125)
+      10%
+        box-shadow: inset 0 0 0 200px rgb(94,0,142), 0 0 300px 300px rgb(94,0,142)
+      15%
+        box-shadow: inset 0 0 0 200px rgb(51,0,139), 0 0 400px 650px rgb(51,0,139)
+      20%
+        box-shadow: inset 0 0 0 200px rgb(0,0,140), 0 0 550px 1100px rgb(0,0,140)
+        transform:  translateZ(-250px) translateX(-150px)
+      25%
+        box-shadow: inset 0 0 0 200px rgb(0,55,134), 0 0 600px 500px rgb(0,55,134)
+      30%
+        box-shadow: inset 0 0 0 200px rgb(0,80,110), 0 0 700px 4700px rgb(0,80,110)
+      35%
+        box-shadow: inset 0 0 0 200px rgb(0,115,99), 0 0 750px 4700px rgb(0,115,99)
+      40%
+        box-shadow: inset 0 0 0 200px rgb(0,147,0), 0 0 800px 4700px rgb(0,147,0)
+        transform: translate3d(-1300px,-800px,-500px)
+      45%
+        box-shadow: inset 0 0 0 200px rgb(91,175,0), 0 0 850px 4700px rgb(91,175,0)
+      50% 
+        box-shadow: inset 0 0 0 200px rgb(143,181,0), 0 0 900px 4100px rgb(143,181,0)
+      55% 
+        box-shadow: inset 0 0 0 200px rgb(167,182,0), 0 0 950px 4750px rgb(167,182,0)
+      60% 
+        box-shadow: inset 0 0 0 200px rgb(200,192,0), 0 0 1000px 4400px rgb(200,192,0)
+        transform: translate3d(1350px,-650px,-400px)
+      65% 
+        box-shadow: inset 0 0 0 200px rgb(207,144,0), 0 0 1000px 4750px rgb(207,144,0)
+      70% 
+        box-shadow: inset 0 0 0 200px rgb(189,99,0), 0 0 170px 4700px rgb(189,99,0)
+      75% 
+        box-shadow: inset 0 0 0 200px rgb(185,59,0), 0 0 170px 4700px rgb(185,59,0)
+      80% 
+        box-shadow: inset 0 0 0 200px rgb(183,35,0), 0 0 170px 4700px rgb(183,35,0)
+        transform: translate3d(1350px,1500px,-550px) rotate(0deg)
+      85% 
+        box-shadow: inset 0 0 0 200px rgb(132,0,0), 0 0 170px 4700px rgb(132,0,0)
+      90% 
+        box-shadow: inset 0 0 0 200px rgb(162,1,0), 0 0 170px 4700px rgb(162,1,0)
+      95% 
+        box-shadow: inset 0 0 0 200px rgb(168,2,0), 0 0 170px 3700px rgb(168,2,0)
+        transform: translate3d(-100px,450px,-50px)
+      100% 
+        box-shadow: inset 0 0 200px 200px rgb(201,1,0), 0 0 170px 3700px rgb(201,1,0)
+//animation HEADER
+@keyframes sunbeam
+  23%
+    background-position: top
+    transition: cubic-bezier(1,.01,.61,1)
+@keyframes gradient
+  13%
+    background-position: top
+    transition: cubic-bezier(1,.01,.61,1)
+  80%
+    background-position: bottom
+    transition: cubic-bezier(1,.01,.81,1.01)
+  100%
+    background-position: top

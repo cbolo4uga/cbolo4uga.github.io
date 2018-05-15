@@ -1,0 +1,62 @@
+.footer
+	padding-top: 56px
+	padding-bottom: 124px
+	max-width: 1900px
+	width: 100%
+	display: flex
+	justify-content: center
+	@media only screen and (max-width: 950px)
+		padding-top: 0
+		padding-bottom: 50px
+	.container
+		display: flex
+		justify-content: center
+.more
+	opacity: .4
+	transition: .2s linear
+	cursor: pointer
+	overflow: hidden
+	position: relative
+	&:hover
+		// background-color: rgba(0,0,0,.1)
+		box-shadow: -3px 5px 10px  rgba(0,0,0,.25), 1px -1px 1px rgba(0,0,0,.1)
+		opacity: 1
+		color: #00D4CA
+	&:focus
+		background-color: rgba(0,0,0,.5)
+		box-shadow: 3px 5px 8px  rgba(0,0,0,.4), -1px -1px 1px rgba(0,0,0,.1)
+		color: #00D4CA
+		opacity: 1
+		outline: none
+	&:after
+		content: attr(data-text)
+		color: #00d4ca
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		line-height: 25px
+		padding: 5px 0
+		opacity: 0
+		transform: translateY(100%)
+		font-weight: 800
+		text-align: center
+	span
+		width: 30%
+		padding: 5px 60px
+		white-space: nowrap
+		font-size: $fzp
+		font-weight: 800
+		line-height: $lh
+	&:after, span
+		transition: all .45s cubic-bezier(0.83,.01,.29,.99)
+	&:hover span
+		opacity: 0;
+		transform: translateY(-100%)
+	&:hover:after
+		opacity: 1
+		transform: translateY(0%)
+
+	

@@ -1,0 +1,82 @@
+.header
+	max-width: 1920px
+	width: 100%
+	display: flex
+	justify-content: center
+	padding-top: 30px
+	position: relative
+	background: url(../img/index/bg-left.svg) no-repeat -3.2em 10.6em
+	background-color: #fff
+	overflow: hidden
+	padding-bottom: 195px
+	&-menu
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 100px
+	&__title
+		margin-bottom: 115px
+	&__tagline
+		color: #fff
+		white-space: pre-line
+		font-size: 35px
+		font-weight: $fw
+		line-height: 53px
+	&__headimg
+		position: absolute
+		right: 0
+		bottom: 0
+		transform: translate(-8px, 130px)
+		// animation: head 100s infinite
+	@media only screen and (max-width: 1250px)
+		&__title img
+			width: 100%
+			transform: rotate(10deg)
+	@media only screen and (max-width: 950px)
+		background-position: -23.7em 3.5em
+		&__headimg
+			display: none
+		&__tagline
+			font-size: 30px
+			line-height: 50px
+	@media only screen and (max-width: 651px)
+		&__title
+			margin-bottom: 60px
+		&__tagline
+			font-size: 26px
+	@media only screen and (max-width: 420px)
+		background-position: -24.7em .5em
+		&__tagline
+			font-size: 18px
+			line-height: 30px
+.wave 
+	width: 100%
+	height: 100%
+	background: url(../img/index/bg-right.svg) no-repeat
+	position: absolute
+	transform: translate(42%, 65%)
+	@media only screen and (max-width: 1250px)
+		transform: translate(17%, 55%)
+	@media only screen and (max-width: 950px)
+		transform: translate(3%,46%)
+	@media only screen and (max-width: 420px)
+		transform: translateY(21%)
+.menu-nav
+	display: flex
+	&__box
+		margin-right: 19px
+		@include last-child-margin
+.nav,
+.contact
+	&__toggle
+		border: none
+		background-color: transparent
+		font-size: 20px
+// @keyframes head
+// 	0% 
+// 	1% 
+// 		transform: scale(-1) rotateX(180deg) translate(-8px, 130px)
+// 	99%
+// 		transform: scale(-1) rotateX(180deg) translate(-8px, 130px)
+// 	100%
+// 		transform: scale(1) rotateX(0deg) translate(-8px, 130px)

@@ -1,0 +1,40 @@
+@mixin last-child-margin
+	&:last-child 
+		margin-right: 0
+		margin-bottom: 0
+
+$ff: 'Montserrat'
+$fw: 400
+$fwm: 500
+$fzs: 12px
+$fzp: 14px
+$fzh: 16px
+$fzl: 18px
+$lh: 25px
+ul
+	list-style: none
+span
+	display: inline-block
+body 
+ 	height: 100%
+ 	position: relative
+ 	font-size: 14px 
+ 	background-color: #fff
+ 	font: $fw $fzp $ff, Arial, sans-serif
+ 	-webkit-font-smoothing: antialiased
+ 	-moz-osx-font-smoothing: grayscale
+.wrapper
+	background-color: #fafafa
+	display: flex
+	flex-direction: column
+	overflow: hidden
+	align-items: center
+.container
+	max-width: 1280px
+	width: 100%
+	padding: 0 40px
+	position: relative
+.hidden 
+	visibility: hidden
+	opacity: 0
+	display: none
